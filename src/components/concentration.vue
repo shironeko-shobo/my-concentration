@@ -1,6 +1,6 @@
 <template>
   <div class="contents-field">
-    <img src="../assets/title-logo.png">
+    <img src="../assets/title-logo.png" class="title">
     <div v-if="gameCleared" class="clear-message">
       <p>おめでとう！貴方こそ真の<img src="../assets/ore.png"></p>
       <p>である!</p>
@@ -19,7 +19,8 @@
 
     <div clas="start-menu" v-if="beforeStart">
       <div class="input-field">
-        <p>プレイするカードの枚数を入力してください(1 ~ 50)</p>
+        <p>プレイするカードの枚数を入力してください</p>
+        <p>(1 ~ 50枚)</p>
         <input type="text" v-model.number="cardCount">
       </div>
       <div class="button-field">
@@ -140,6 +141,10 @@ input {
   border-radius: 3px;
 }
 
+.button-field {
+  margin-bottom: 100px;
+}
+
 .button-field button{
   margin-top: 30px;
   height: 30px;
@@ -168,6 +173,14 @@ button.cant-start {
 .ore {
   font-size: 50px;
   color: #dc143c;
+}
+
+img {
+  max-width: 100%;
+}
+
+img.title {
+  margin-top: 50px;
 }
 
 </style>
